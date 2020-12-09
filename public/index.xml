@@ -125,35 +125,13 @@ Follow the following steps:
     </item>
     
     <item>
-      <title>About Hugo</title>
+      <title></title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>このテーマはhugo-coderを元に作成をしています。
-一見綺麗なポートフォリをサイトですが、より個人的なことも伝えられるようにしました。
-変更点の詳細はブログから、&amp;ldquo;FeaturesOfCoderPortfolio&amp;quot;を見てください。
-それ以外のDEMOのコンテンツに関してはhugo-coderのものです。
-質問や、報告がありましたら、下記からお願いいたします。
- open an issue on GitHub ask me on Twitter   Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
- Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.
-Setup Some fun facts about Hugo:
- Built in Go Loosely inspired by Jekyll Primarily developed by spf13 on the train while commuting to and from Manhattan.</description>
-    </item>
-    
-    <item>
-      <title>About Hugo</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>This theme is created based on hugo-coder.
-I made it possible to tell yourself more by my change.
-Please see &amp;ldquo;FeaturesOfCoderPortfolio&amp;rdquo; in the post about the change. Regarding other demo contents, it is hugo-coder&amp;rsquo;s thing.
-Have questions or suggestions? Feel free to open an issue on GitHub or ask me on Twitter.
- Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:</description>
+      <description>I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accouting and Data Science.
+EductionDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting Information Systems, University of DhakaBBA, Major: Accounting Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor actitivies a lot, specially fishing and hiking in Southern Illinios.</description>
     </item>
     
     <item>
