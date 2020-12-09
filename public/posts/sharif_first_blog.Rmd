@@ -1,0 +1,321 @@
+---
+title: "Exploratory Data Analysis (EDA)"
+author: "Sharif Islam"
+date: 2020-12-09
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction 
+Now a days, data science or data analytics has become a buzzword.The emergence of social media and some other platforms like social media have given birth to vast amount of data. The Economist [^1] reports that "the world's most valuable resource is no longer oil, but data." Data is the raw materials for gaining addtional insights and the data analytics is the means through which the insights are extracted from the data. 
+
+# Data Science and  Accountants 
+As we know accounting is called the "language of business" and accountants play siginificant role in generating vast amount of data about an organziation. Additionally, accountants can leverage the data science tools to help business unlock valuable insights  and thus make improved decision making.  
+
+# `R` Programming - A Great Tool for Data Science
+There are many tools for data science. Of these tools, R is one of the most powerful tools. It is powerful in that it has more than 11,000 packages on the CRAN ( Comprehensive R Archive Network) and thousands of other packages on Github and other platforms. Moreover, many companies around the word use R. Some of the companies that use R include - 
+
+```{r table-simple, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+set.caption("")
+my.data <- "
+          |       |                       
+  Facebook| Google| Twitter
+Mircrosoft| Uber  | Airbnb 
+IBM       | Boeing| Ford 
+New York Times | Wells Fargo| American Express"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+# `tidyverse` package in R 
+The `tidyverse` package in R is a very useful package for manipulating data. The `tidyverse` is a collection of a set of packages. Of these packages, we will particularly focus on two pacakages - `dplyr` and `ggplot2`. The `dplyr` is for **data manipulation** and the `ggplot2` is for **data vizualization**. In R, to install a package, you need to write `install.packages ()` code and to load the package, you need to write `library ()` code. Therefore, to install the package, you should write `install.packages("tidyverse")` and to load the follwing code -
+
+```{r }
+library(tidyverse)
+```
+
+# `dplyr` Package - Data Manipulation Tool
+
+As stated above, the `dplyr` package is for **data manipulation**. There are many functions in `dplyr`; however, of these functions, six (06) functons are very much essential for data manipulation. In this project, we will learn those six necessary functions. These functions include - `select`, `filter`, `arrange`, `mutate`, `summarize` and , `group_by`. In additon to these functions, we will also use some other functions such as `glimpse`, `count`, `dim`, `str` and so on. 
+
+# Data Set for Classroom Practice 
+
+There are many sources from which you can collect the data and manipulate in R. Some of the data sets are already included in some packages. In our class room, we will use a package called `nycflights13` and install it by writing the code `install.packages("nycflights13")`. In the package, there are several data set, but we will use the `flights` data set. In order to get the data set in R Environment, you need to first install the package and load the data set and the following codes should be executed - 
+
+```{r }
+library(nycflights13)
+flights <- flights
+```
+
+## Assignment `<- ` & Pipe  ` %>% ` operator
+
+Frequently, we will use the assignment  `<- ` and pipe ` %>% ` operator. The keyboard shortcurt for `<- ` is **alt+-** and ` %>% ` is **ctrl+shift+M**
+
+# Meta Data - Data About Data 
+Once you load a data set in R, your next job should be to learn about some characteristcs about the data. To do so, you first need to load the `tidyverse` package by running the code `library(tidyverse)`. Then you should write the following code - 
+
+```{r }
+library(tidyverse)
+glimpse(flights)
+```
+
+It can be seen that there are 336,776 observations and 19 variables. Additionally, the label of the variables can be identified. For examplem, the variable "year" is **integer**, the variable "carrier" is **character** variable, and the variable "time_hour" is **date** variable. This metadata is important for further manipulation of the data. You can also use `dim ()` to see the number of rows and columns. Furhter, `str()` can be used. The `names ()` function gives you the names of the variables of the data set. 
+```{r}
+dim(flights)
+str(flights)
+names(flights)
+```
+
+You can also know more about the flights data set (built-in data set in packages) by the following code - `help ("flights")` or `?flights`
+
+If you want to see the data set in excel-like spread sheet, you have to write `View (flights)`. This code will open the data in an excel-like spreadsheet. Note that the **V** in view is **capital** letter. 
+
+## Changing the type of the variable 
+Sometimes we might need to change the type of the variable; e.g., converting an integer variable to a character variable. In such case, we need to write code. If we want to convert "flight" variable from **int** type to **chr**, you need to write the following code - 
+
+```{r }
+flights$flight <- as.character(flights$flight)
+```
+
+Other codes for the conversion should be like this - `as.character()`, `as.factor()`
+
+Also by writing code, you can check the type of the variable. For example - 
+```{r }
+is.character(flights$hour)
+is.numeric(flights$hour)
+```
+Alternatively, you can use `class()` function to know the type of the variable. For example - 
+```{r }
+class(flights$year)
+```
+
+## `count()`  function 
+
+To know the frequency of different variables, we can use the ``count()` function. For example - we want to know whether the dataset includes information about American Airlines (AA); we should write - 
+```{r}
+flights %>% 
+  count(carrier)
+```
+
+If we want to know the name and the numbers of airports the  flights left, we need to use the "origin" variable - 
+```{r}
+flights %>% 
+  count(origin)
+```
+
+Simialrly, we can see where these flights go by the following code - 
+```{r}
+flights %>% 
+  count(dest)
+```
+
+
+# 1st (First) verb - `select ()`
+
+The `select ()` function is used to select some **columns** from your data set. For example, if you want to select the variables **year, month, day, dep_time** from your data set. Then you should write the following code (We created a new data set called flights2)
+
+```{r}
+flights2 <- flights %>% 
+  select(year, month, day, dep_time)
+glimpse(flights2)
+```
+
+Alternatively, you can write the following code to get the same results - 
+```{r}
+flights2 <- flights %>% 
+  select(year:dep_time)
+glimpse(flights2)
+```
+
+There is another function called `starts_with()`, which we use to select those variables that start with some pre-selected phrases. For example - if we want to selet all variables that start with **arr**, then we should write the following code (the new data set is called - arr) 
+```{r}
+arr <- flights %>% 
+  select(starts_with("arr"))
+glimpse(arr)
+```
+
+A similar function like `starts_with()` is `ends_with()`. `contains()` function can be used as well to select those variables that contain specific pharases/words. `matches()` function also serves the similar objective. 
+
+If you want to rearrange the column (Variables) of your data set, then you can use `everything()` function. For example - you want to first put the **carrier** and **flight** variable and all variables after these two variables. In such case, you have to write the following code - 
+
+```{r}
+flights <- flights %>% 
+  select(carrier, flight, everything())
+glimpse(flights)
+```
+
+# 2nd (Second) verb - `filter ()`
+If we want to subset our dataset by rows, then `filter ()` is used. For example - we want the flights whose destination was Chicgo Airport (ORD). 
+```{r}
+chicago <- flights %>% 
+  filter(dest =="ORD")
+glimpse(chicago)
+```
+
+Similarly, we want to subset the data for the month of January. 
+
+```{r}
+january <- flights %>% 
+  filter(month =="1")
+glimpse(january)
+```
+
+If we to subset the data for the month of January and February, the following code should be run
+```{r}
+jan_feb <- flights %>% 
+  filter(month %in% c(1, 2))
+glimpse(jan_feb)
+```
+
+If we want to subset the data for all airlines other than American Airlines (AA), for the month of January and February and for the distance greater than 100, then the following code should be executed. 
+
+```{r}
+naa <- flights %>% 
+  filter(carrier != "AA", month %in% c(1, 2), distance > 1000
+  )
+glimpse(naa)
+```
+
+# 3rd (Third) verb - `arrange ()`
+
+The `arrange ()`function allows you to reorder your data set by one or more variables.
+For example, if you want to reorder the `flights` dataset by distance, you need to execute the following code - 
+```{r}
+flights %>% 
+  arrange(distance)
+```
+
+From the results, we can see the lowest distance was 17-mile flight between EWR and LGA. The next lowest distance was 80-mile flight between EWR and PHL. However, if you want to see the longest distance, then you have to use `desc ()` function becasue `arrange ()` function reorders the rows in ascending order (from lowest to highest).
+
+```{r}
+flights %>% 
+  arrange(desc(distance))
+```
+
+It is evident that the highest distance was 4983 miles between JFK and HNL. 
+
+# 4th (Fourth) verb - `mutate ()`
+
+The function `mutate ()` is used to create new variables (columns). For example, we want to know the `total delay`, which is the sum of the `dep_delay` and `arr_delay`; then, we should write the following code - 
+
+```{r}
+flights <- flights %>% 
+  mutate(total_delay = dep_delay + arr_delay)
+glimpse(flights)
+```
+
+# 5th (Fifth) verb - `summarize ()` 
+
+The `summarize ()` function is used to calculate different statistics such as mean, median, standard deviation, maximum, and minimum value. For example, we want to calucate the average distance and average delay of all flights in the month of January - 
+
+```{r}
+flights %>% 
+  filter(month == "1") %>% 
+  summarise(avg_distance = mean (distance),
+            avg_delay = mean (total_delay, na.rm = TRUE),
+            max_distance = max (distance),
+            min_distance = min (distance, na.rm = TRUE),
+            std_distance = sd (distance),
+            med_distance = median (distance)
+            )
+  
+```
+
+# 6th (Sixth) verb - `group_by ()` 
+
+The `group_by ()` function is very useful when it is used with `summarize ()` function. For example, we want to know the average delay of each airport in New York in descending order; then, we should write the following code - 
+```{r}
+flights %>% 
+  group_by(origin) %>% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %>% 
+  arrange(desc(avg_delay))
+```
+
+If you want to know the average delay of each carrier, then you need to write the following code - 
+```{r}
+flights %>% 
+  group_by(carrier) %>% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %>% 
+  arrange(desc(avg_delay))
+```
+
+If you want to know the average delay of each month, then you need to write the following code - 
+```{r}
+flights %>% 
+  group_by(month) %>% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %>% 
+  arrange(desc(avg_delay))
+```
+
+# `ggplot2 ()` Package - Data Visualization Tool
+
+The package `ggplot2 ()` is a very powerful tool for data visualization. 
+
+## Scatter Plot - 
+
+In scatter Plot, we use to continuous variables in x axis and y axis. The following code is run to create a scatter plot of two variables called `time_hour` and `total_delay`
+
+```{r}
+flights %>% 
+  ggplot(mapping = aes( x = time_hour, y = total_delay))+
+  geom_point()
+```
+
+However, we can also a thrid varible in scatter plot.
+
+```{r}
+flights %>% 
+  ggplot(mapping = aes( x = time_hour, y = total_delay))+
+  geom_point()+
+  facet_wrap(~origin)
+
+```
+
+
+```{r}
+flights %>% 
+  ggplot(mapping = aes( time_hour, total_delay, color = origin))+
+  geom_point()
+```
+
+## Line Plot - 
+
+In line plot, we draw line for the points of two continuous variables. 
+
+```{r}
+flights %>% 
+  group_by(month) %>% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %>%
+  ggplot(mapping = aes(x = month, y = avg_delay)) + 
+  geom_smooth()
+```
+
+Like scatter plot, a third variable can also be added to the line plot.
+```{r}
+flights %>% 
+  ggplot(mapping = aes(x = month, y = total_delay, color = origin)) + 
+  geom_smooth()
+```
+
+
+```{r}
+flights %>% 
+  ggplot(mapping = aes(x = day, y = total_delay, color = origin)) + 
+  geom_smooth()
+```
+
+# Conclusion
+Data science is the number 1 most promising job in the US in recent years[^2]. Many disciplines around the world are incorporting the knowledge of data science in their day to operations. The skills employers most frequently seek in data sciene job posting are Python, R, ans SQL. It is hoped that the preliminary discussion in this project will help you to get some idea about data science. 
+
+
+[^1]: https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data
+[^2]:https://www.techrepublic.com/article/why-data-scientist-is-the-most-promising-job-of-2019/

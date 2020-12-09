@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Sharif Islam, DBA,CPA,CMA">
+    <meta name="description" content="/">
+    <meta name="keywords" content="Accountancy, Data Analytics, Personal">
+
+    <meta property="og:site_name" content="Sharif Islam">
+    <meta property="og:title" content="
+  Exploratory Data Analysis (EDA) - Sharif Islam
+">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/posts/sharif_first_blog/">
+    <meta property="og:image" content="/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="/posts/sharif_first_blog/">
+    <meta name="twitter:image" content="/">
+
+    <base href="/posts/sharif_first_blog/">
+    <title>
+  Exploratory Data Analysis (EDA) - Sharif Islam
+</title>
+
+    <link rel="canonical" href="/posts/sharif_first_blog/">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    
+      <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Sharif Islam">
+      <link href="/index.xml" rel="feed" type="application/rss+xml" title="Sharif Islam" />
+    
+
+    <meta name="generator" content="Hugo 0.78.2" />
+  </head>
+
+  <body class="">
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">Sharif Islam</a>
+    <input type="checkbox" id="menu-control"/>
+    <label class="menu-mobile  float-right " for="menu-control">
+      <span class="btn-mobile  float-right ">&#9776;</span>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="/about">About</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="/posts">Blog</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="/projects">PROJECTS</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="/CV/mycv2_r.pdf">CV</a>
+            </li>
+          
+            <li class="navigation-item  align-center ">
+              <a class="navigation-link" href="/contact">CONTACT</a>
+            </li>
+          
+        
+        
+      </ul>
+    </label>
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">Exploratory Data Analysis (EDA)</h1>
+      <h2 class="date">December 9, 2020</h2>
+
+      
+    </header>
+
+    
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Now a days, data science or data analytics has become a buzzword.The emergence of social media and some other platforms like social media have given birth to vast amount of data. The Economist <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> reports that “the world’s most valuable resource is no longer oil, but data.” Data is the raw materials for gaining addtional insights and the data analytics is the means through which the insights are extracted from the data.</p>
+</div>
+<div id="data-science-and-accountants" class="section level1">
+<h1>Data Science and Accountants</h1>
+<p>As we know accounting is called the “language of business” and accountants play siginificant role in generating vast amount of data about an organziation. Additionally, accountants can leverage the data science tools to help business unlock valuable insights and thus make improved decision making.</p>
+</div>
+<div id="r-programming---a-great-tool-for-data-science" class="section level1">
+<h1><code>R</code> Programming - A Great Tool for Data Science</h1>
+<p>There are many tools for data science. Of these tools, R is one of the most powerful tools. It is powerful in that it has more than 11,000 packages on the CRAN ( Comprehensive R Archive Network) and thousands of other packages on Github and other platforms. Moreover, many companies around the word use R. Some of the companies that use R include -</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center"> </th>
+<th align="center"> </th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Facebook</td>
+<td align="center">Google</td>
+<td align="center">Twitter</td>
+</tr>
+<tr class="even">
+<td align="center">Mircrosoft</td>
+<td align="center">Uber</td>
+<td align="center">Airbnb</td>
+</tr>
+<tr class="odd">
+<td align="center">IBM</td>
+<td align="center">Boeing</td>
+<td align="center">Ford</td>
+</tr>
+<tr class="even">
+<td align="center">New York Times</td>
+<td align="center">Wells Fargo</td>
+<td align="center">American Express</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tidyverse-package-in-r" class="section level1">
+<h1><code>tidyverse</code> package in R</h1>
+<p>The <code>tidyverse</code> package in R is a very useful package for manipulating data. The <code>tidyverse</code> is a collection of a set of packages. Of these packages, we will particularly focus on two pacakages - <code>dplyr</code> and <code>ggplot2</code>. The <code>dplyr</code> is for <strong>data manipulation</strong> and the <code>ggplot2</code> is for <strong>data vizualization</strong>. In R, to install a package, you need to write <code>install.packages ()</code> code and to load the package, you need to write <code>library ()</code> code. Therefore, to install the package, you should write <code>install.packages("tidyverse")</code> and to load the follwing code -</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------- tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.0     v purrr   0.3.3
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts ------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div id="dplyr-package---data-manipulation-tool" class="section level1">
+<h1><code>dplyr</code> Package - Data Manipulation Tool</h1>
+<p>As stated above, the <code>dplyr</code> package is for <strong>data manipulation</strong>. There are many functions in <code>dplyr</code>; however, of these functions, six (06) functons are very much essential for data manipulation. In this project, we will learn those six necessary functions. These functions include - <code>select</code>, <code>filter</code>, <code>arrange</code>, <code>mutate</code>, <code>summarize</code> and , <code>group_by</code>. In additon to these functions, we will also use some other functions such as <code>glimpse</code>, <code>count</code>, <code>dim</code>, <code>str</code> and so on.</p>
+</div>
+<div id="data-set-for-classroom-practice" class="section level1">
+<h1>Data Set for Classroom Practice</h1>
+<p>There are many sources from which you can collect the data and manipulate in R. Some of the data sets are already included in some packages. In our class room, we will use a package called <code>nycflights13</code> and install it by writing the code <code>install.packages("nycflights13")</code>. In the package, there are several data set, but we will use the <code>flights</code> data set. In order to get the data set in R Environment, you need to first install the package and load the data set and the following codes should be executed -</p>
+<pre class="r"><code>library(nycflights13)
+flights &lt;- flights</code></pre>
+<div id="assignment---pipe-operator" class="section level2">
+<h2>Assignment <code>&lt;-</code> &amp; Pipe <code>%&gt;%</code> operator</h2>
+<p>Frequently, we will use the assignment <code>&lt;-</code> and pipe <code>%&gt;%</code> operator. The keyboard shortcurt for <code>&lt;-</code> is <strong>alt+-</strong> and <code>%&gt;%</code> is <strong>ctrl+shift+M</strong></p>
+</div>
+</div>
+<div id="meta-data---data-about-data" class="section level1">
+<h1>Meta Data - Data About Data</h1>
+<p>Once you load a data set in R, your next job should be to learn about some characteristcs about the data. To do so, you first need to load the <code>tidyverse</code> package by running the code <code>library(tidyverse)</code>. Then you should write the following code -</p>
+<pre class="r"><code>library(tidyverse)
+glimpse(flights)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 19
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 55...
+## $ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+## $ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;B6&quot;, &quot;DL&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;EV&quot;, &quot;B6&quot;...
+## $ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N619AA&quot;, &quot;N804JB&quot;, &quot;N668DN&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;MIA&quot;, &quot;BQN&quot;, &quot;ATL&quot;, &quot;ORD&quot;, &quot;FLL&quot;, &quot;IA...
+## $ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...</code></pre>
+<p>It can be seen that there are 336,776 observations and 19 variables. Additionally, the label of the variables can be identified. For examplem, the variable “year” is <strong>integer</strong>, the variable “carrier” is <strong>character</strong> variable, and the variable “time_hour” is <strong>date</strong> variable. This metadata is important for further manipulation of the data. You can also use <code>dim ()</code> to see the number of rows and columns. Furhter, <code>str()</code> can be used. The <code>names ()</code> function gives you the names of the variables of the data set.</p>
+<pre class="r"><code>dim(flights)</code></pre>
+<pre><code>## [1] 336776     19</code></pre>
+<pre class="r"><code>str(flights)</code></pre>
+<pre><code>## tibble [336,776 x 19] (S3: tbl_df/tbl/data.frame)
+##  $ year          : int [1:336776] 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
+##  $ month         : int [1:336776] 1 1 1 1 1 1 1 1 1 1 ...
+##  $ day           : int [1:336776] 1 1 1 1 1 1 1 1 1 1 ...
+##  $ dep_time      : int [1:336776] 517 533 542 544 554 554 555 557 557 558 ...
+##  $ sched_dep_time: int [1:336776] 515 529 540 545 600 558 600 600 600 600 ...
+##  $ dep_delay     : num [1:336776] 2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
+##  $ arr_time      : int [1:336776] 830 850 923 1004 812 740 913 709 838 753 ...
+##  $ sched_arr_time: int [1:336776] 819 830 850 1022 837 728 854 723 846 745 ...
+##  $ arr_delay     : num [1:336776] 11 20 33 -18 -25 12 19 -14 -8 8 ...
+##  $ carrier       : chr [1:336776] &quot;UA&quot; &quot;UA&quot; &quot;AA&quot; &quot;B6&quot; ...
+##  $ flight        : int [1:336776] 1545 1714 1141 725 461 1696 507 5708 79 301 ...
+##  $ tailnum       : chr [1:336776] &quot;N14228&quot; &quot;N24211&quot; &quot;N619AA&quot; &quot;N804JB&quot; ...
+##  $ origin        : chr [1:336776] &quot;EWR&quot; &quot;LGA&quot; &quot;JFK&quot; &quot;JFK&quot; ...
+##  $ dest          : chr [1:336776] &quot;IAH&quot; &quot;IAH&quot; &quot;MIA&quot; &quot;BQN&quot; ...
+##  $ air_time      : num [1:336776] 227 227 160 183 116 150 158 53 140 138 ...
+##  $ distance      : num [1:336776] 1400 1416 1089 1576 762 ...
+##  $ hour          : num [1:336776] 5 5 5 5 6 5 6 6 6 6 ...
+##  $ minute        : num [1:336776] 15 29 40 45 0 58 0 0 0 0 ...
+##  $ time_hour     : POSIXct[1:336776], format: &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; ...</code></pre>
+<pre class="r"><code>names(flights)</code></pre>
+<pre><code>##  [1] &quot;year&quot;           &quot;month&quot;          &quot;day&quot;            &quot;dep_time&quot;      
+##  [5] &quot;sched_dep_time&quot; &quot;dep_delay&quot;      &quot;arr_time&quot;       &quot;sched_arr_time&quot;
+##  [9] &quot;arr_delay&quot;      &quot;carrier&quot;        &quot;flight&quot;         &quot;tailnum&quot;       
+## [13] &quot;origin&quot;         &quot;dest&quot;           &quot;air_time&quot;       &quot;distance&quot;      
+## [17] &quot;hour&quot;           &quot;minute&quot;         &quot;time_hour&quot;</code></pre>
+<p>You can also know more about the flights data set (built-in data set in packages) by the following code - <code>help ("flights")</code> or <code>?flights</code></p>
+<p>If you want to see the data set in excel-like spread sheet, you have to write <code>View (flights)</code>. This code will open the data in an excel-like spreadsheet. Note that the <strong>V</strong> in view is <strong>capital</strong> letter.</p>
+<div id="changing-the-type-of-the-variable" class="section level2">
+<h2>Changing the type of the variable</h2>
+<p>Sometimes we might need to change the type of the variable; e.g., converting an integer variable to a character variable. In such case, we need to write code. If we want to convert “flight” variable from <strong>int</strong> type to <strong>chr</strong>, you need to write the following code -</p>
+<pre class="r"><code>flights$flight &lt;- as.character(flights$flight)</code></pre>
+<p>Other codes for the conversion should be like this - <code>as.character()</code>, <code>as.factor()</code></p>
+<p>Also by writing code, you can check the type of the variable. For example -</p>
+<pre class="r"><code>is.character(flights$hour)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>is.numeric(flights$hour)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Alternatively, you can use <code>class()</code> function to know the type of the variable. For example -</p>
+<pre class="r"><code>class(flights$year)</code></pre>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+</div>
+<div id="count-function" class="section level2">
+<h2><code>count()</code> function</h2>
+<p>To know the frequency of different variables, we can use the `<code>count()</code> function. For example - we want to know whether the dataset includes information about American Airlines (AA); we should write -</p>
+<pre class="r"><code>flights %&gt;% 
+  count(carrier)</code></pre>
+<pre><code>## # A tibble: 16 x 2
+##    carrier     n
+##    &lt;chr&gt;   &lt;int&gt;
+##  1 9E      18460
+##  2 AA      32729
+##  3 AS        714
+##  4 B6      54635
+##  5 DL      48110
+##  6 EV      54173
+##  7 F9        685
+##  8 FL       3260
+##  9 HA        342
+## 10 MQ      26397
+## 11 OO         32
+## 12 UA      58665
+## 13 US      20536
+## 14 VX       5162
+## 15 WN      12275
+## 16 YV        601</code></pre>
+<p>If we want to know the name and the numbers of airports the flights left, we need to use the “origin” variable -</p>
+<pre class="r"><code>flights %&gt;% 
+  count(origin)</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   origin      n
+##   &lt;chr&gt;   &lt;int&gt;
+## 1 EWR    120835
+## 2 JFK    111279
+## 3 LGA    104662</code></pre>
+<p>Simialrly, we can see where these flights go by the following code -</p>
+<pre class="r"><code>flights %&gt;% 
+  count(dest)</code></pre>
+<pre><code>## # A tibble: 105 x 2
+##    dest      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 ABQ     254
+##  2 ACK     265
+##  3 ALB     439
+##  4 ANC       8
+##  5 ATL   17215
+##  6 AUS    2439
+##  7 AVL     275
+##  8 BDL     443
+##  9 BGR     375
+## 10 BHM     297
+## # ... with 95 more rows</code></pre>
+</div>
+</div>
+<div id="st-first-verb---select" class="section level1">
+<h1>1st (First) verb - <code>select ()</code></h1>
+<p>The <code>select ()</code> function is used to select some <strong>columns</strong> from your data set. For example, if you want to select the variables <strong>year, month, day, dep_time</strong> from your data set. Then you should write the following code (We created a new data set called flights2)</p>
+<pre class="r"><code>flights2 &lt;- flights %&gt;% 
+  select(year, month, day, dep_time)
+glimpse(flights2)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 4
+## $ year     &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day      &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, 558...</code></pre>
+<p>Alternatively, you can write the following code to get the same results -</p>
+<pre class="r"><code>flights2 &lt;- flights %&gt;% 
+  select(year:dep_time)
+glimpse(flights2)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 4
+## $ year     &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month    &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day      &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, 558...</code></pre>
+<p>There is another function called <code>starts_with()</code>, which we use to select those variables that start with some pre-selected phrases. For example - if we want to selet all variables that start with <strong>arr</strong>, then we should write the following code (the new data set is called - arr)</p>
+<pre class="r"><code>arr &lt;- flights %&gt;% 
+  select(starts_with(&quot;arr&quot;))
+glimpse(arr)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 2
+## $ arr_time  &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849, 8...
+## $ arr_delay &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -14,...</code></pre>
+<p>A similar function like <code>starts_with()</code> is <code>ends_with()</code>. <code>contains()</code> function can be used as well to select those variables that contain specific pharases/words. <code>matches()</code> function also serves the similar objective.</p>
+<p>If you want to rearrange the column (Variables) of your data set, then you can use <code>everything()</code> function. For example - you want to first put the <strong>carrier</strong> and <strong>flight</strong> variable and all variables after these two variables. In such case, you have to write the following code -</p>
+<pre class="r"><code>flights &lt;- flights %&gt;% 
+  select(carrier, flight, everything())
+glimpse(flights)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 19
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;B6&quot;, &quot;DL&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;EV&quot;, &quot;B6&quot;...
+## $ flight         &lt;chr&gt; &quot;1545&quot;, &quot;1714&quot;, &quot;1141&quot;, &quot;725&quot;, &quot;461&quot;, &quot;1696&quot;, &quot;507&quot;,...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 55...
+## $ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+## $ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N619AA&quot;, &quot;N804JB&quot;, &quot;N668DN&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;MIA&quot;, &quot;BQN&quot;, &quot;ATL&quot;, &quot;ORD&quot;, &quot;FLL&quot;, &quot;IA...
+## $ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...</code></pre>
+</div>
+<div id="nd-second-verb---filter" class="section level1">
+<h1>2nd (Second) verb - <code>filter ()</code></h1>
+<p>If we want to subset our dataset by rows, then <code>filter ()</code> is used. For example - we want the flights whose destination was Chicgo Airport (ORD).</p>
+<pre class="r"><code>chicago &lt;- flights %&gt;% 
+  filter(dest ==&quot;ORD&quot;)
+glimpse(chicago)</code></pre>
+<pre><code>## Rows: 17,283
+## Columns: 19
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;AA&quot;, &quot;MQ&quot;, &quot;AA&quot;, &quot;AA&quot;, &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;MQ&quot;...
+## $ flight         &lt;chr&gt; &quot;1696&quot;, &quot;301&quot;, &quot;3768&quot;, &quot;303&quot;, &quot;305&quot;, &quot;1092&quot;, &quot;544&quot;, ...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 554, 558, 608, 629, 656, 709, 715, 739, 749, 828, 83...
+## $ sched_dep_time &lt;int&gt; 558, 600, 600, 630, 700, 700, 713, 745, 710, 830, 83...
+## $ dep_delay      &lt;dbl&gt; -4, -2, 8, -1, -4, 9, 2, -6, 39, -2, 0, -1, 1, -5, -...
+## $ arr_time       &lt;int&gt; 740, 753, 807, 824, 854, 852, 911, 918, 939, 1027, 1...
+## $ sched_arr_time &lt;int&gt; 728, 745, 735, 810, 850, 832, 850, 930, 850, 1012, 1...
+## $ arr_delay      &lt;dbl&gt; 12, 8, 32, 14, 4, 20, 21, -12, 49, 15, 3, 3, 13, -11...
+## $ tailnum        &lt;chr&gt; &quot;N39463&quot;, &quot;N3ALAA&quot;, &quot;N9EAMQ&quot;, &quot;N3CYAA&quot;, &quot;N4WNAA&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;LGA&quot;, &quot;LGA&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;ORD&quot;, &quot;ORD&quot;, &quot;ORD&quot;, &quot;ORD&quot;, &quot;ORD&quot;, &quot;ORD&quot;, &quot;ORD&quot;, &quot;OR...
+## $ air_time       &lt;dbl&gt; 150, 138, 139, 140, 143, 135, 156, 137, 148, 160, 13...
+## $ distance       &lt;dbl&gt; 719, 733, 719, 733, 733, 733, 719, 733, 719, 740, 73...
+## $ hour           &lt;dbl&gt; 5, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 9, 9, 9, 10, 10, 10...
+## $ minute         &lt;dbl&gt; 58, 0, 0, 30, 0, 0, 13, 45, 10, 30, 30, 3, 30, 45, 1...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 06:00:00, 2013-01-0...</code></pre>
+<p>Similarly, we want to subset the data for the month of January.</p>
+<pre class="r"><code>january &lt;- flights %&gt;% 
+  filter(month ==&quot;1&quot;)
+glimpse(january)</code></pre>
+<pre><code>## Rows: 27,004
+## Columns: 19
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;B6&quot;, &quot;DL&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;EV&quot;, &quot;B6&quot;...
+## $ flight         &lt;chr&gt; &quot;1545&quot;, &quot;1714&quot;, &quot;1141&quot;, &quot;725&quot;, &quot;461&quot;, &quot;1696&quot;, &quot;507&quot;,...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 55...
+## $ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+## $ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N619AA&quot;, &quot;N804JB&quot;, &quot;N668DN&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;MIA&quot;, &quot;BQN&quot;, &quot;ATL&quot;, &quot;ORD&quot;, &quot;FLL&quot;, &quot;IA...
+## $ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...</code></pre>
+<p>If we to subset the data for the month of January and February, the following code should be run</p>
+<pre class="r"><code>jan_feb &lt;- flights %&gt;% 
+  filter(month %in% c(1, 2))
+glimpse(jan_feb)</code></pre>
+<pre><code>## Rows: 51,955
+## Columns: 19
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;B6&quot;, &quot;DL&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;EV&quot;, &quot;B6&quot;...
+## $ flight         &lt;chr&gt; &quot;1545&quot;, &quot;1714&quot;, &quot;1141&quot;, &quot;725&quot;, &quot;461&quot;, &quot;1696&quot;, &quot;507&quot;,...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 55...
+## $ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+## $ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N619AA&quot;, &quot;N804JB&quot;, &quot;N668DN&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;MIA&quot;, &quot;BQN&quot;, &quot;ATL&quot;, &quot;ORD&quot;, &quot;FLL&quot;, &quot;IA...
+## $ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...</code></pre>
+<p>If we want to subset the data for all airlines other than American Airlines (AA), for the month of January and February and for the distance greater than 100, then the following code should be executed.</p>
+<pre class="r"><code>naa &lt;- flights %&gt;% 
+  filter(carrier != &quot;AA&quot;, month %in% c(1, 2), distance &gt; 1000
+  )
+glimpse(naa)</code></pre>
+<pre><code>## Rows: 18,456
+## Columns: 19
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;B6&quot;, &quot;B6&quot;, &quot;B6&quot;, &quot;UA&quot;, &quot;UA&quot;, &quot;UA&quot;...
+## $ flight         &lt;chr&gt; &quot;1545&quot;, &quot;1714&quot;, &quot;725&quot;, &quot;507&quot;, &quot;49&quot;, &quot;71&quot;, &quot;194&quot;, &quot;11...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 544, 555, 558, 558, 558, 558, 559, 600, 60...
+## $ sched_dep_time &lt;int&gt; 515, 529, 545, 600, 600, 600, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, -1, -5, -2, -2, -2, -2, -1, 0, 1, -8, 0, 11, 3...
+## $ arr_time       &lt;int&gt; 830, 850, 1004, 913, 849, 853, 924, 923, 854, 851, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 1022, 854, 851, 856, 917, 937, 902, 858, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, -18, 19, -2, -3, 7, -14, -8, -7, -6, -8, -17...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N804JB&quot;, &quot;N516JB&quot;, &quot;N793JB&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;EWR&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;EW...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;BQN&quot;, &quot;FLL&quot;, &quot;PBI&quot;, &quot;TPA&quot;, &quot;LAX&quot;, &quot;SF...
+## $ air_time       &lt;dbl&gt; 227, 227, 183, 158, 149, 158, 345, 361, 337, 152, 14...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1576, 1065, 1028, 1005, 2475, 2565, 2227...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 45, 0, 0, 0, 0, 0, 0, 0, 0, 10, 7, 0, 10, 15...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...</code></pre>
+</div>
+<div id="rd-third-verb---arrange" class="section level1">
+<h1>3rd (Third) verb - <code>arrange ()</code></h1>
+<p>The <code>arrange ()</code>function allows you to reorder your data set by one or more variables.
+For example, if you want to reorder the <code>flights</code> dataset by distance, you need to execute the following code -</p>
+<pre class="r"><code>flights %&gt;% 
+  arrange(distance)</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##    carrier flight  year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1 US      1632    2013     7    27       NA            106        NA       NA
+##  2 EV      3833    2013     1     3     2127           2129        -2     2222
+##  3 EV      4193    2013     1     4     1240           1200        40     1333
+##  4 EV      4502    2013     1     4     1829           1615       134     1937
+##  5 EV      4645    2013     1     4     2128           2129        -1     2218
+##  6 EV      4193    2013     1     5     1155           1200        -5     1241
+##  7 EV      4619    2013     1     6     2125           2129        -4     2224
+##  8 EV      4619    2013     1     7     2124           2129        -5     2212
+##  9 EV      4619    2013     1     8     2127           2130        -3     2304
+## 10 EV      4619    2013     1     9     2126           2129        -3     2217
+## # ... with 336,766 more rows, and 10 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>From the results, we can see the lowest distance was 17-mile flight between EWR and LGA. The next lowest distance was 80-mile flight between EWR and PHL. However, if you want to see the longest distance, then you have to use <code>desc ()</code> function becasue <code>arrange ()</code> function reorders the rows in ascending order (from lowest to highest).</p>
+<pre class="r"><code>flights %&gt;% 
+  arrange(desc(distance))</code></pre>
+<pre><code>## # A tibble: 336,776 x 19
+##    carrier flight  year month   day dep_time sched_dep_time dep_delay arr_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+##  1 HA      51      2013     1     1      857            900        -3     1516
+##  2 HA      51      2013     1     2      909            900         9     1525
+##  3 HA      51      2013     1     3      914            900        14     1504
+##  4 HA      51      2013     1     4      900            900         0     1516
+##  5 HA      51      2013     1     5      858            900        -2     1519
+##  6 HA      51      2013     1     6     1019            900        79     1558
+##  7 HA      51      2013     1     7     1042            900       102     1620
+##  8 HA      51      2013     1     8      901            900         1     1504
+##  9 HA      51      2013     1     9      641            900      1301     1242
+## 10 HA      51      2013     1    10      859            900        -1     1449
+## # ... with 336,766 more rows, and 10 more variables: sched_arr_time &lt;int&gt;,
+## #   arr_delay &lt;dbl&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>It is evident that the highest distance was 4983 miles between JFK and HNL.</p>
+</div>
+<div id="th-fourth-verb---mutate" class="section level1">
+<h1>4th (Fourth) verb - <code>mutate ()</code></h1>
+<p>The function <code>mutate ()</code> is used to create new variables (columns). For example, we want to know the <code>total delay</code>, which is the sum of the <code>dep_delay</code> and <code>arr_delay</code>; then, we should write the following code -</p>
+<pre class="r"><code>flights &lt;- flights %&gt;% 
+  mutate(total_delay = dep_delay + arr_delay)
+glimpse(flights)</code></pre>
+<pre><code>## Rows: 336,776
+## Columns: 20
+## $ carrier        &lt;chr&gt; &quot;UA&quot;, &quot;UA&quot;, &quot;AA&quot;, &quot;B6&quot;, &quot;DL&quot;, &quot;UA&quot;, &quot;B6&quot;, &quot;EV&quot;, &quot;B6&quot;...
+## $ flight         &lt;chr&gt; &quot;1545&quot;, &quot;1714&quot;, &quot;1141&quot;, &quot;725&quot;, &quot;461&quot;, &quot;1696&quot;, &quot;507&quot;,...
+## $ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013...
+## $ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1...
+## $ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 55...
+## $ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 60...
+## $ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2,...
+## $ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 8...
+## $ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 8...
+## $ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7,...
+## $ tailnum        &lt;chr&gt; &quot;N14228&quot;, &quot;N24211&quot;, &quot;N619AA&quot;, &quot;N804JB&quot;, &quot;N668DN&quot;, &quot;N...
+## $ origin         &lt;chr&gt; &quot;EWR&quot;, &quot;LGA&quot;, &quot;JFK&quot;, &quot;JFK&quot;, &quot;LGA&quot;, &quot;EWR&quot;, &quot;EWR&quot;, &quot;LG...
+## $ dest           &lt;chr&gt; &quot;IAH&quot;, &quot;IAH&quot;, &quot;MIA&quot;, &quot;BQN&quot;, &quot;ATL&quot;, &quot;ORD&quot;, &quot;FLL&quot;, &quot;IA...
+## $ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149...
+## $ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 73...
+## $ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6...
+## $ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59...
+## $ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-0...
+## $ total_delay    &lt;dbl&gt; 13, 24, 35, -19, -31, 8, 14, -17, -11, 6, -4, -5, 5,...</code></pre>
+</div>
+<div id="th-fifth-verb---summarize" class="section level1">
+<h1>5th (Fifth) verb - <code>summarize ()</code></h1>
+<p>The <code>summarize ()</code> function is used to calculate different statistics such as mean, median, standard deviation, maximum, and minimum value. For example, we want to calucate the average distance and average delay of all flights in the month of January -</p>
+<pre class="r"><code>flights %&gt;% 
+  filter(month == &quot;1&quot;) %&gt;% 
+  summarise(avg_distance = mean (distance),
+            avg_delay = mean (total_delay, na.rm = TRUE),
+            max_distance = max (distance),
+            min_distance = min (distance, na.rm = TRUE),
+            std_distance = sd (distance),
+            med_distance = median (distance)
+            )</code></pre>
+<pre><code>## # A tibble: 1 x 6
+##   avg_distance avg_delay max_distance min_distance std_distance med_distance
+##          &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;
+## 1        1007.      16.1         4983           80         719.          872</code></pre>
+</div>
+<div id="th-sixth-verb---group_by" class="section level1">
+<h1>6th (Sixth) verb - <code>group_by ()</code></h1>
+<p>The <code>group_by ()</code> function is very useful when it is used with <code>summarize ()</code> function. For example, we want to know the average delay of each airport in New York in descending order; then, we should write the following code -</p>
+<pre class="r"><code>flights %&gt;% 
+  group_by(origin) %&gt;% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %&gt;% 
+  arrange(desc(avg_delay))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 3 x 2
+##   origin avg_delay
+##   &lt;chr&gt;      &lt;dbl&gt;
+## 1 EWR         24.1
+## 2 JFK         17.6
+## 3 LGA         16.1</code></pre>
+<p>If you want to know the average delay of each carrier, then you need to write the following code -</p>
+<pre class="r"><code>flights %&gt;% 
+  group_by(carrier) %&gt;% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %&gt;% 
+  arrange(desc(avg_delay))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 16 x 2
+##    carrier avg_delay
+##    &lt;chr&gt;       &lt;dbl&gt;
+##  1 F9          42.1 
+##  2 FL          38.7 
+##  3 EV          35.6 
+##  4 YV          34.5 
+##  5 WN          27.3 
+##  6 OO          24.5 
+##  7 9E          23.8 
+##  8 B6          22.4 
+##  9 MQ          21.2 
+## 10 UA          15.6 
+## 11 VX          14.5 
+## 12 DL          10.9 
+## 13 AA           8.93
+## 14 US           5.87
+## 15 HA          -2.01
+## 16 AS          -4.10</code></pre>
+<p>If you want to know the average delay of each month, then you need to write the following code -</p>
+<pre class="r"><code>flights %&gt;% 
+  group_by(month) %&gt;% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %&gt;% 
+  arrange(desc(avg_delay))</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## # A tibble: 12 x 2
+##    month avg_delay
+##    &lt;int&gt;     &lt;dbl&gt;
+##  1     7     38.2 
+##  2     6     37.2 
+##  3    12     31.4 
+##  4     4     25.0 
+##  5     3     19.0 
+##  6     8     18.6 
+##  7     5     16.4 
+##  8     2     16.4 
+##  9     1     16.1 
+## 10    10      6.07
+## 11    11      5.88
+## 12     9      2.61</code></pre>
+</div>
+<div id="ggplot2-package---data-visualization-tool" class="section level1">
+<h1><code>ggplot2 ()</code> Package - Data Visualization Tool</h1>
+<p>The package <code>ggplot2 ()</code> is a very powerful tool for data visualization.</p>
+<div id="scatter-plot--" class="section level2">
+<h2>Scatter Plot -</h2>
+<p>In scatter Plot, we use to continuous variables in x axis and y axis. The following code is run to create a scatter plot of two variables called <code>time_hour</code> and <code>total_delay</code></p>
+<pre class="r"><code>flights %&gt;% 
+  ggplot(mapping = aes( x = time_hour, y = total_delay))+
+  geom_point()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>However, we can also a thrid varible in scatter plot.</p>
+<pre class="r"><code>flights %&gt;% 
+  ggplot(mapping = aes( x = time_hour, y = total_delay))+
+  geom_point()+
+  facet_wrap(~origin)</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<pre class="r"><code>flights %&gt;% 
+  ggplot(mapping = aes( time_hour, total_delay, color = origin))+
+  geom_point()</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing missing values (geom_point).</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<div id="line-plot--" class="section level2">
+<h2>Line Plot -</h2>
+<p>In line plot, we draw line for the points of two continuous variables.</p>
+<pre class="r"><code>flights %&gt;% 
+  group_by(month) %&gt;% 
+  summarize(avg_delay = mean (total_delay, na.rm = TRUE)) %&gt;%
+  ggplot(mapping = aes(x = month, y = avg_delay)) + 
+  geom_smooth()</code></pre>
+<pre><code>## `summarise()` ungrouping output (override with `.groups` argument)</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Like scatter plot, a third variable can also be added to the line plot.</p>
+<pre class="r"><code>flights %&gt;% 
+  ggplot(mapping = aes(x = month, y = total_delay, color = origin)) + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing non-finite values (stat_smooth).</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<pre class="r"><code>flights %&gt;% 
+  ggplot(mapping = aes(x = day, y = total_delay, color = origin)) + 
+  geom_smooth()</code></pre>
+<pre><code>## `geom_smooth()` using method = &#39;gam&#39; and formula &#39;y ~ s(x, bs = &quot;cs&quot;)&#39;</code></pre>
+<pre><code>## Warning: Removed 9430 rows containing non-finite values (stat_smooth).</code></pre>
+<p><img src="/posts/sharif_first_blog_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<p>Data science is the number 1 most promising job in the US in recent years<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>. Many disciplines around the world are incorporting the knowledge of data science in their day to operations. The skills employers most frequently seek in data sciene job posting are Python, R, ans SQL. It is hoped that the preliminary discussion in this project will help you to get some idea about data science.</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a href="https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data" class="uri">https://www.economist.com/leaders/2017/05/06/the-worlds-most-valuable-resource-is-no-longer-oil-but-data</a><a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://www.techrepublic.com/article/why-data-scientist-is-the-most-promising-job-of-2019/" class="uri">https://www.techrepublic.com/article/why-data-scientist-is-the-most-promising-job-of-2019/</a><a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+  </article>
+
+  <br/>
+
+  
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "yourdiscussshortname" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+</section>
+
+      </div>
+      
+        <footer class="footer">
+  <section class="container">
+    
+      <div class="sns-shares sp-sns-shares">
+        
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2fsharif_first_blog%2f&ref_src=twsrc%5Etfw&text=Exploratory%20Data%20Analysis%20%28EDA%29 Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2fsharif_first_blog%2f"><i class="fab fa-twitter"></i></a>
+        
+        
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2fsharif_first_blog%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+        
+        
+        
+        
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2fsharif_first_blog%2f"><i class="fab fa-linkedin"></i></a>
+        
+      </div>
+    
+    
+      <p>The world&#39;s most valuable resource is no longer oil, but data (The Economist, 2017)</p>
+    
+     © 2020    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/naro143/hugo-coder-portfolio">CoderPortfolio</a>. 
+
+  </section>
+</footer>
+<div class="fixed-bar">
+  <section class="container">
+    
+      <p id="privateTriggerText">If you like my page, please Share  -&gt;<a id="privateTrigger">Click!</a></p>
+    
+    
+      <div class="sns-shares pc-sns-shares">
+        
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2fsharif_first_blog%2f&ref_src=twsrc%5Etfw&text=Exploratory%20Data%20Analysis%20%28EDA%29 Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2fsharif_first_blog%2f"><i class="fab fa-twitter"></i></a>
+        
+        
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2fsharif_first_blog%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+        
+        
+        
+        
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2fsharif_first_blog%2f"><i class="fab fa-linkedin"></i></a>
+        
+      </div>
+    
+  </section>
+</div>
+
+      
+    </main>
+
+    
+
+  <script src="/js/app.js"></script>
+  
+  </body>
+</html>
