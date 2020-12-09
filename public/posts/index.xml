@@ -13,7 +13,7 @@
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>/posts/sharif_first_blog/</guid>
-      <description>IntroductionNow a days, data science or data analytics has become a buzzword.The emergence of social media and some other platforms like social media have given birth to vast amount of data. The Economist 1 reports that “the world’s most valuable resource is no longer oil, but data.” Data is the raw materials for gaining addtional insights and the data analytics is the means through which the insights are extracted from the data.</description>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}IntroductionNow a days, data science or data analytics has become a buzzword.</description>
     </item>
     
     <item>
