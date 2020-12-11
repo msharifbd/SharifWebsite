@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Wed, 09 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>contact</title>
+      <link>/contact2/</link>
+      <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/contact2/</guid>
+      <description>If you want to contact with me, please email at mdshariful.islam@business.siu.edu</description>
+    </item>
+    
+    <item>
       <title>Exploratory Data Analysis (EDA)</title>
       <link>/posts/sharif_first_blog/</link>
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
