@@ -1,0 +1,9 @@
+---
+title: "contact"
+author: "Sharif Islam"
+date: '2020-12-11'
+output: html_document
+---
+
+
+If you want to contact with me, please email at \newline  <mdshariful.islam@business.siu.edu> 
