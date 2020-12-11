@@ -6,4 +6,4 @@ output: html_document
 ---
 
 
-If you want to contact with me, please email at <mdshariful.islam@business.siu.edu> 
+If you want to contact with me, please email at \newline  <mdshariful.islam@business.siu.edu> 
