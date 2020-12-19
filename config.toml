@@ -1,0 +1,112 @@
+baseurl = "https://sharifshafi.netlify.app/"
+title = "Sharif Islam"
+
+theme = "hugo-coder-portfolio"
+
+DefaultContentLanguage = "en"
+
+paginate = 20
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+pygmentsUseClasses = true
+
+disqusShortname = "test-n7c34fbkb2"
+
+[params]
+    author = "Sharif Islam"
+    description = "Sharif Islam's personal website"
+    keywords = "Assistant Professor of Accountancy & Data Analytics"
+    info = "Assistant Professor of Accountancy & Data Analytics"
+    avatarurl = "images/avatar.jpg"
+    footercontent = "The world's most valuable resource is no longer oil, but data (The Economist, 2017)"
+    fixedbarContent = "If you like my page, please Share  ->"
+    fixedbarContentAfter = ""
+
+    hideCredits = false
+    hideCopyright = false
+    
+
+    # Bottom sns share
+    snsShare = true
+    # Popular sns share
+    # if you want add sns. please message!
+    enableTwitterShare = true
+    enableFacebookShare = true
+    enableHatenaShare = false 
+    enableLineShare = false 
+    enableLinkedInShare = true
+
+    thumbnail = "images/tn.png"
+
+    # Custom CSS
+    custom_css = []
+
+    # Alignment of Mobile Menu items
+    itemscentered = true
+
+    # RTL support
+    rtl = false
+
+    langseparator = "|"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/msharifbd"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter"
+    weight = 2
+    url = "https://twitter.com/MSharifIslam2"
+    
+[[params.social]]
+    name = "LinkedIn"
+    icon = "fab fa-linkedin"
+    weight = 3
+    url = "https://www.linkedin.com/in/md-shariful-islam-cpa-cma-09345730/"
+
+[languages]
+    [languages.en]
+        languagecode = "en"
+        languagename = "English" # The language name to be displayed in the selector.
+        title = "Sharif Islam"
+
+        # You can configure the theme parameter for each language.
+        [languages.en.params]
+            author = "Sharif Islam, DBA,CPA,CMA"
+            info =  "Assistant Professor of Accountancy & Data Analytics"
+            description = "Sharif Islam's personal website"
+            keywords = "Accountancy, Data Analytics, Personal"
+
+        [languages.en.menu] # It is possible to change the menu too.
+
+            [[languages.en.menu.main]]
+                name = "About"
+                weight = 1.0
+                url = "about"
+
+            [[languages.en.menu.main]]
+                name = "Blog"
+                weight = 2.0
+                url = "posts"
+
+            [[languages.en.menu.main]]
+                name = "PROJECTS"
+                weight = 3
+                url = "projects"
+                
+            [[languages.en.menu.main]]
+                name = "CV"
+                weight = 4
+                url = "CV/mycv2_r.pdf"
+                
+            [[languages.en.menu.main]]
+                name = "CONTACT"
+                weight = 5
+                url = "contact"
+
+
+   

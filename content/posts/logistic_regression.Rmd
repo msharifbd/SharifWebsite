@@ -1,0 +1,23 @@
+---
+title: "Logistic Regression in R"
+author: "Sharif Islam"
+date: '2020-12-19'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pacakges Needed to Run Logistic Regression
+
+```{r}
+# Loading packages
+pacman::p_load(
+  tidyverse,
+  stargazer, 
+  lmtest,
+  sandwich
+)
+```
+
