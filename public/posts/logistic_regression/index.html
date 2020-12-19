@@ -11,22 +11,22 @@
 
     <meta property="og:site_name" content="Sharif Islam">
     <meta property="og:title" content="
-  Projects - Sharif Islam
+  Logistic Regression in R - Sharif Islam
 ">
-    <meta property="og:description" content="projects">
+    <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/projects/">
-    <meta property="og:image" content="/images/tn.png">
+    <meta property="og:url" content="/posts/logistic_regression/">
+    <meta property="og:image" content="/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="/projects/">
-    <meta name="twitter:image" content="/images/tn.png">
+    <meta name="twitter:site" content="/posts/logistic_regression/">
+    <meta name="twitter:image" content="/">
 
-    <base href="/projects/">
+    <base href="/posts/logistic_regression/">
     <title>
-  Projects - Sharif Islam
+  Logistic Regression in R - Sharif Islam
 </title>
 
-    <link rel="canonical" href="/projects/">
+    <link rel="canonical" href="/posts/logistic_regression/">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
@@ -90,48 +90,57 @@
 
       <div class="content">
         
-  <section class="container page">
+  <section class="container post">
   <article>
     <header>
-      <h1>Projects</h1>
+      <h1 class="title">Logistic Regression in R</h1>
+      <h2 class="date">December 19, 2020</h2>
+
+      
     </header>
 
-    <h2 id="portfolio-demo">Portfolio Demo</h2>
+    
 
 
-  
-  
-
-
-
-
-
-<div class="portfolio">
-    <div class="portfolio-inner">
-        <div class="portfolio-image"><img src="/images/tn.png" alt="Coder Portfolio"></div>
-        <div class="portfolio-content">
-            <h2 id="coder-portfolio">Coder Portfolio</h2>
-<p>hugo-coderを元に作成しました。<br>
-より自分を伝えられるようにしました。</p>
-
-        </div>
-	</div>
+<div id="pacakges-need-to-reun-logistic-regression" class="section level1">
+<h1>Pacakges Need to reun Logistic Regression</h1>
+<pre class="r"><code># Loading packages
+pacman::p_load(
+  tidyverse,
+  stargazer, 
+  lmtest,
+  sandwich
+)</code></pre>
 </div>
 
   </article>
-</section>
 
-<div id="disqus_thread"></div>
-<script>
-(function() {
-var d = document, s = d.createElement('script');
-s.src = 'https://test-n7c34fbkb2.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
+  <br/>
+
+  
+      <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "test-n7c34fbkb2" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  
+</section>
 
       </div>
       
@@ -140,15 +149,15 @@ s.setAttribute('data-timestamp', +new Date());
     
       <div class="sns-shares sp-sns-shares">
         
-          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fprojects%2f&ref_src=twsrc%5Etfw&text=Projects Sharif%20Islam&tw_p=tweetbutton&url=%2fprojects%2f"><i class="fab fa-twitter"></i></a>
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2flogistic_regression%2f&ref_src=twsrc%5Etfw&text=Logistic%20Regression%20in%20R Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2flogistic_regression%2f"><i class="fab fa-twitter"></i></a>
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fprojects%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2flogistic_regression%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fprojects%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2flogistic_regression%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     
@@ -167,15 +176,15 @@ s.setAttribute('data-timestamp', +new Date());
     
       <div class="sns-shares pc-sns-shares">
         
-          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fprojects%2f&ref_src=twsrc%5Etfw&text=Projects Sharif%20Islam&tw_p=tweetbutton&url=%2fprojects%2f"><i class="fab fa-twitter"></i></a>
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2flogistic_regression%2f&ref_src=twsrc%5Etfw&text=Logistic%20Regression%20in%20R Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2flogistic_regression%2f"><i class="fab fa-twitter"></i></a>
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fprojects%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2flogistic_regression%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fprojects%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2flogistic_regression%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     
