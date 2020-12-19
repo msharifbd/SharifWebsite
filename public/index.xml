@@ -56,25 +56,12 @@ EductionDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana 
     </item>
     
     <item>
-      <title>Projects</title>
+      <title></title>
       <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/projects/</guid>
-      <description>Portfolio Demo  Coder Portfolio hugo-coderを元に作成しました。
-より自分を伝えられるようにしました。
-   </description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/</guid>
-      <description>Portfolio Demo  Coder Portfolio This theme is created based on hugo-coder.
-I made it possible to tell yourself more by my change.
-   </description>
+      <description>CEO Network Centrality &amp;amp; Audit Timeliness The study examines the association between CEO’s network connections and audit timeliness. Based on extant research, we hypothesize that well-connected CEOs are associated with reduced audit lag. Using a sample of over 2000 firms for the period 2004 to 2017, we find that, ceteris paribus, firms with well-connected CEOs are associated with reduced audit lag. We also find firms led by more connected CEOs have better financial reporting quality and pay higher auditing fees for increased audit efforts.</description>
     </item>
     
   </channel>
