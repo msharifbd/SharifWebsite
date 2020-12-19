@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Pacakges Need to reun Logistic Regression
+# Pacakges Needed to Run Logistic Regression
 
 ```{r}
 # Loading packages
