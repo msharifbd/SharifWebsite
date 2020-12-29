@@ -11,22 +11,22 @@
 
     <meta property="og:site_name" content="Sharif Islam">
     <meta property="og:title" content="
-  Logistic Regression in R - Sharif Islam
+  Summary Statistics Using tidyverse - Sharif Islam
 ">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/posts/logistic_regression/">
+    <meta property="og:url" content="/posts/sumstat_tidyverse/">
     <meta property="og:image" content="/">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="/posts/logistic_regression/">
+    <meta name="twitter:site" content="/posts/sumstat_tidyverse/">
     <meta name="twitter:image" content="/">
 
-    <base href="/posts/logistic_regression/">
+    <base href="/posts/sumstat_tidyverse/">
     <title>
-  Logistic Regression in R - Sharif Islam
+  Summary Statistics Using tidyverse - Sharif Islam
 </title>
 
-    <link rel="canonical" href="/posts/logistic_regression/">
+    <link rel="canonical" href="/posts/sumstat_tidyverse/">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     
@@ -93,8 +93,8 @@
   <section class="container post">
   <article>
     <header>
-      <h1 class="title">Logistic Regression in R</h1>
-      <h2 class="date">December 19, 2020</h2>
+      <h1 class="title">Summary Statistics Using tidyverse</h1>
+      <h2 class="date">December 29, 2020</h2>
 
       
     </header>
@@ -122,16 +122,43 @@ h4.date { /* Header 4 - and the author and data headers use this too  */
   text-align: center;
 }
 </style>
-<div id="pacakges-needed-to-run-logistic-regression" class="section level1">
-<h1>Pacakges Needed to Run Logistic Regression</h1>
-<pre class="r"><code># Loading packages
-pacman::p_load(
-  tidyverse,
-  stargazer, 
-  lmtest,
-  sandwich
-)</code></pre>
-</div>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages ------------------------------------ tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.0     v purrr   0.3.3
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts --------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<p>For illustration purpose, <code>mtcars</code> dataset is being used. To create summary statistics, <code>summarise_each</code> function is used along with <code>funs</code> function.</p>
+<pre class="r"><code>df &lt;- as_tibble(mtcars)
+df.sum &lt;- df %&gt;%
+  select(mpg, cyl, vs, am, gear, carb) %&gt;% # select variables to summarise
+  summarise_each(funs(Min = min, 
+                      Q25 = quantile (., 0.25), 
+                      Median = median, 
+                      Q75 = quantile (., 0.75), 
+                      Max = max,
+                      Mean = mean, 
+                      StdDev = sd,
+                      N = n())) </code></pre>
+<p>To organize the raw summary into a nice table, two excellent functions from <code>tidyverse</code> - <code>pivot_longer</code> and <code>pivot_wider</code> - are used.</p>
+<pre class="r"><code># Using Pivot_*() function 
+df.stats.tidy1 &lt;- df.sum %&gt;% 
+  pivot_longer(cols = everything(), names_to = &quot;stat&quot;, values_to = &quot;count&quot;) %&gt;%
+  separate(stat, into = c(&quot;Variables&quot;, &quot;stat&quot;), sep = &quot;_&quot;) %&gt;%
+  pivot_wider(names_from = stat, values_from = count) %&gt;%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns</code></pre>
+<p>This is the final summary statistics - <code>df.stats.tidy1</code> - tables -</p>
+<p>Alternatively, we can use the old version of the <code>pivot_longer</code> and <code>pivot_wider</code>, which are called <code>gather</code> and <code>spread</code> function respectively.</p>
+<pre class="r"><code># Using gather () and spread() function 
+df.stats.tidy2 &lt;- df.sum %&gt;% 
+  gather(stat, val) %&gt;%
+  separate(stat, into = c(&quot;Variables&quot;, &quot;stat&quot;), sep = &quot;_&quot;) %&gt;%
+  spread(stat, val) %&gt;%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max ) # reorder columns</code></pre>
+<p>This is the final summary statistics - <code>df.stats.tidy2</code> - tables -</p>
 
   </article>
 
@@ -169,15 +196,15 @@ pacman::p_load(
     
       <div class="sns-shares sp-sns-shares">
         
-          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2flogistic_regression%2f&ref_src=twsrc%5Etfw&text=Logistic%20Regression%20in%20R Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2flogistic_regression%2f"><i class="fab fa-twitter"></i></a>
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2fsumstat_tidyverse%2f&ref_src=twsrc%5Etfw&text=Summary%20Statistics%20Using%20tidyverse Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2fsumstat_tidyverse%2f"><i class="fab fa-twitter"></i></a>
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2flogistic_regression%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2fsumstat_tidyverse%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2flogistic_regression%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2fsumstat_tidyverse%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     
@@ -196,15 +223,15 @@ pacman::p_load(
     
       <div class="sns-shares pc-sns-shares">
         
-          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2flogistic_regression%2f&ref_src=twsrc%5Etfw&text=Logistic%20Regression%20in%20R Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2flogistic_regression%2f"><i class="fab fa-twitter"></i></a>
+          <a class="sns-share twitter-share" href="https://twitter.com/intent/tweet?original_referer=%2fposts%2fsumstat_tidyverse%2f&ref_src=twsrc%5Etfw&text=Summary%20Statistics%20Using%20tidyverse Sharif%20Islam&tw_p=tweetbutton&url=%2fposts%2fsumstat_tidyverse%2f"><i class="fab fa-twitter"></i></a>
         
         
-          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2flogistic_regression%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
+          <a class="fb btn sns-share fb-share" href="http://www.facebook.com/share.php?u=%2fposts%2fsumstat_tidyverse%2f" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fab fa-facebook-f"></i></a>
         
         
         
         
-          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2flogistic_regression%2f"><i class="fab fa-linkedin"></i></a>
+          <a class="sns-share linkedIn-share" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fposts%2fsumstat_tidyverse%2f"><i class="fab fa-linkedin"></i></a>
         
       </div>
     

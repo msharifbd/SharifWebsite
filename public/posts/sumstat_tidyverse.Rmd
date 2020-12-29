@@ -1,0 +1,74 @@
+---
+title: "Summary Statistics Using tidyverse"
+author: "Sharif Islam"
+date: '2020-12-29'
+output: html_document
+---
+
+<style type="text/css">
+
+h1.title {
+  font-size: 38px;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlack;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+</style>
+
+```{r warning=FALSE}
+library(tidyverse)
+```
+
+For illustration purpose, `mtcars` dataset is being used. To create summary statistics, `summarise_each` function is used along with `funs` function. 
+
+```{r warning=FALSE}
+df <- as_tibble(mtcars)
+df.sum <- df %>%
+  select(mpg, cyl, vs, am, gear, carb) %>% # select variables to summarise
+  summarise_each(funs(Min = min, 
+                      Q25 = quantile (., 0.25), 
+                      Median = median, 
+                      Q75 = quantile (., 0.75), 
+                      Max = max,
+                      Mean = mean, 
+                      StdDev = sd,
+                      N = n())) 
+```
+
+To organize the raw summary into a nice table, two excellent functions from `tidyverse` - `pivot_longer` and `pivot_wider` - are used. 
+
+```{r warning=FALSE}
+# Using Pivot_*() function 
+df.stats.tidy1 <- df.sum %>% 
+  pivot_longer(cols = everything(), names_to = "stat", values_to = "count") %>%
+  separate(stat, into = c("Variables", "stat"), sep = "_") %>%
+  pivot_wider(names_from = stat, values_from = count) %>%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns
+```
+
+This is the final summary statistics - `df.stats.tidy1` - tables - 
+
+Alternatively, we can use the old version of the `pivot_longer` and `pivot_wider`, which are called `gather` and `spread` function respectively. 
+
+```{r warning=FALSE}
+# Using gather () and spread() function 
+df.stats.tidy2 <- df.sum %>% 
+  gather(stat, val) %>%
+  separate(stat, into = c("Variables", "stat"), sep = "_") %>%
+  spread(stat, val) %>%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max ) # reorder columns
+```
+
+
+This is the final summary statistics - `df.stats.tidy2` - tables - 
