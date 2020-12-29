@@ -1,0 +1,66 @@
+---
+title: "Summary Statistics Using tidyverse"
+author: "Sharif Islam"
+date: '2020-12-29'
+output: html_document
+---
+
+
+
+<style type="text/css">
+
+h1.title {
+  font-size: 38px;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlack;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+</style>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages ------------------------------------ tidyverse 1.3.0 --</code></pre>
+<pre><code>## v ggplot2 3.3.0     v purrr   0.3.3
+## v tibble  3.0.4     v dplyr   1.0.2
+## v tidyr   1.0.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0</code></pre>
+<pre><code>## -- Conflicts --------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<p>For illustration purpose, <code>mtcars</code> dataset is being used. To create summary statistics, <code>summarise_each</code> function is used along with <code>funs</code> function.</p>
+<pre class="r"><code>df &lt;- as_tibble(mtcars)
+df.sum &lt;- df %&gt;%
+  select(mpg, cyl, vs, am, gear, carb) %&gt;% # select variables to summarise
+  summarise_each(funs(Min = min, 
+                      Q25 = quantile (., 0.25), 
+                      Median = median, 
+                      Q75 = quantile (., 0.75), 
+                      Max = max,
+                      Mean = mean, 
+                      StdDev = sd,
+                      N = n())) </code></pre>
+<p>To organize the raw summary into a nice table, two excellent functions from <code>tidyverse</code> - <code>pivot_longer</code> and <code>pivot_wider</code> - are used.</p>
+<pre class="r"><code># Using Pivot_*() function 
+df.stats.tidy1 &lt;- df.sum %&gt;% 
+  pivot_longer(cols = everything(), names_to = &quot;stat&quot;, values_to = &quot;count&quot;) %&gt;%
+  separate(stat, into = c(&quot;Variables&quot;, &quot;stat&quot;), sep = &quot;_&quot;) %&gt;%
+  pivot_wider(names_from = stat, values_from = count) %&gt;%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns</code></pre>
+<p>This is the final summary statistics - <code>df.stats.tidy1</code> - tables -</p>
+<p>Alternatively, we can use the old version of the <code>pivot_longer</code> and <code>pivot_wider</code>, which are called <code>gather</code> and <code>spread</code> function respectively.</p>
+<pre class="r"><code># Using gather () and spread() function 
+df.stats.tidy2 &lt;- df.sum %&gt;% 
+  gather(stat, val) %&gt;%
+  separate(stat, into = c(&quot;Variables&quot;, &quot;stat&quot;), sep = &quot;_&quot;) %&gt;%
+  spread(stat, val) %&gt;%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max ) # reorder columns</code></pre>
+<p>This is the final summary statistics - <code>df.stats.tidy2</code> - tables -</p>
