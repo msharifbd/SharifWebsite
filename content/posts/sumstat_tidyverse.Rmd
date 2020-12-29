@@ -26,13 +26,13 @@ h4.date { /* Header 4 - and the author and data headers use this too  */
 }
 </style>
 
-```{r warning=FALSE}
+```{r}
 library(tidyverse)
 ```
 
 * For illustration purpose, ```mtcars``` dataset is being used. To create summary statistics, ``` summarise_each``` function is used along with ``` funs```function. 
 
-```{r warning=FALSE}
+```{r}
 df <- as_tibble(mtcars)
 df.sum <- df %>%
   select(mpg, cyl, vs, am, gear, carb) %>% # select variables to summarise
@@ -48,16 +48,18 @@ df.sum <- df %>%
 
 * To organize the raw summary into a nice table, two excellent functions from `tidyverse` - `pivot_longer` and `pivot_wider` - are used. 
 
-```{r warning=FALSE}
+```{r}
 # Using Pivot_*() function 
 df.stats.tidy1 <- df.sum %>% 
   pivot_longer(cols = everything(), names_to = "stat", values_to = "count") %>%
   separate(stat, into = c("Variables", "stat"), sep = "_") %>%
   pivot_wider(names_from = stat, values_from = count) %>%
   select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns
+
+df.stats.tidy1
 ```
 
-This is the final summary statistics - `r df.stats.tidy1` - tables - 
+This is the final summary statistics - `r df.stats.tidy1`  tables - 
 
 ```{r}
 df.stats.tidy1
@@ -73,12 +75,14 @@ df.stats.tidy2 <- df.sum %>%
   separate(stat, into = c("Variables", "stat"), sep = "_") %>%
   spread(stat, val) %>%
   select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max ) # reorder columns
+
+df.stats.tidy2
 ```
 
 
 This is the final summary statistics - `r df.stats.tidy2` - tables - 
 
 ```{r}
-df.stats.tidy2
+
 ```
 
