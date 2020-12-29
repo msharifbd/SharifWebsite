@@ -66,7 +66,7 @@ df.stats.tidy1
 
 Alternatively, we can use the old version of the `pivot_longer` and `pivot_wider`, which are called `gather` and `spread` function respectively. 
 
-```{r warning=FALSE}
+```{r }
 # Using gather () and spread() function 
 df.stats.tidy2 <- df.sum %>% 
   gather(stat, val) %>%
