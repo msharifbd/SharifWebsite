@@ -17,15 +17,6 @@
     </item>
     
     <item>
-      <title>Summary Statistics Using tidyverse</title>
-      <link>/posts/sumstat_tidyverse/</link>
-      <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/sumstat_tidyverse/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ------------------------------------ tidyverse 1.</description>
-    </item>
-    
-    <item>
       <title>Logistic Regression in R</title>
       <link>/posts/logistic_regression/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
