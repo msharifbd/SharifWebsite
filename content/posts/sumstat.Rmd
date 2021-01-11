@@ -46,6 +46,29 @@ df.sum <- df %>%
                       N = n())) 
 ```
 
+Alternatively, we can use the `across()` function to calculate the summary stat - 
+
+```{r}
+df.sum2 <- df %>%
+  select(mpg, cyl, vs, am, gear, carb) %>% 
+  mutate(across(where(is.factor), as.numeric)) %>% 
+  summarise(across(
+    .cols = everything(), 
+    .fns = list(
+                Min = min, 
+                      Q25 = ~quantile (., 0.25), 
+                      Median = median, 
+                      Q75 = ~quantile (., 0.75), 
+                      Max = max,
+                      Mean = mean, 
+                      StdDev = sd,
+                      N = ~n()
+                ), na.rm = T,
+   .names = "{col}_{fn}"
+                   )
+            )
+```
+
 To organize the raw summary into a nice table, two excellent functions from `tidyverse` - `pivot_longer` and `pivot_wider` - are used. 
 
 ```{r}
@@ -57,10 +80,25 @@ df.stats.tidy1 <- df.sum %>%
   select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns
 ```
 
+For `df.sum2` dataset - 
+
+```{r}
+df.stats.tidy <- df.sum2 %>% 
+  pivot_longer(cols = everything(), names_to = "stat", values_to = "count") %>%
+  separate(stat, into = c("Variables", "stat"), sep = "_") %>%
+  pivot_wider(names_from = stat, values_from = count) %>%
+  select(Variables,N, Mean, StdDev , Min, Q25, Median, Q75, Max )   # reorder columns
+```
+
 This is the final summary statistics tables - 
 
 ```{r}
 df.stats.tidy1
+```
+
+```{r}
+df.stats.tidy %>% 
+  mutate(across(where(is.numeric), ~round(.,2)))
 ```
 
 
