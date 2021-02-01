@@ -1,4 +1,4 @@
-baseurl = "https://sharifshafi.netlify.app/"
+baseurl = "https://sharif.netlify.app/"
 title = "Sharif Islam"
 
 theme = "hugo-coder-portfolio"
@@ -99,13 +99,18 @@ disqusShortname = "test-n7c34fbkb2"
                 url = "projects"
                 
             [[languages.en.menu.main]]
-                name = "CV"
+                name = "BOOKS"
                 weight = 4
+                url = "DAINA/bookdown-demo.pdf"    
+                
+            [[languages.en.menu.main]]
+                name = "CV"
+                weight = 5
                 url = "CV/mycv2_r.pdf"
                 
             [[languages.en.menu.main]]
                 name = "CONTACT"
-                weight = 5
+                weight = 6
                 url = "contact"
 
 

@@ -2,74 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharif Islam</title>
-    <link>/</link>
+    <link>https://sharif.netlify.app/</link>
     <description>Recent content on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Summary Statistics Using tidyverse</title>
-      <link>/posts/sumstat/</link>
+      <link>https://sharif.netlify.app/posts/sumstat/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/sumstat/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages --------------------- tidyverse 1.</description>
+      <guid>https://sharif.netlify.app/posts/sumstat/</guid>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ----------------- tidyverse 1.</description>
     </item>
     
     <item>
       <title>Logistic Regression in R</title>
-      <link>/posts/logistic_regression/</link>
+      <link>https://sharif.netlify.app/posts/logistic_regression/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/logistic_regression/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
+      <guid>https://sharif.netlify.app/posts/logistic_regression/</guid>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>/contact/</link>
+      <link>https://sharif.netlify.app/contact/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/contact/</guid>
+      <guid>https://sharif.netlify.app/contact/</guid>
       <description>If you want to contact with me, please email at mdshariful.islam@business.siu.edu</description>
     </item>
     
     <item>
       <title>Exploratory Data Analysis (EDA)</title>
-      <link>/posts/sharif_first_blog/</link>
+      <link>https://sharif.netlify.app/posts/sharif_first_blog/</link>
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/sharif_first_blog/</guid>
+      <guid>https://sharif.netlify.app/posts/sharif_first_blog/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}IntroductionNow a days, data science or data analytics has become a buzzword.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
     </item>
     
     <item>
       <title></title>
-      <link>/about/</link>
+      <link>https://sharif.netlify.app/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://sharif.netlify.app/about/</guid>
       <description>I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accouting and Data Science.
 EductionDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting &amp;amp; Information Systems, University of DhakaBBA, Major: Accounting &amp;amp; Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor actitivies a lot, specially fishing and hiking in Southern Illinios.</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>/projects/</link>
+      <link>https://sharif.netlify.app/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/projects/</guid>
+      <guid>https://sharif.netlify.app/projects/</guid>
       <description>CEO Network Centrality &amp;amp; Audit Timeliness The study examines the association between CEO’s network connections and audit timeliness. Based on extant research, we hypothesize that well-connected CEOs are associated with reduced audit lag. Using a sample of over 2000 firms for the period 2004 to 2017, we find that, ceteris paribus, firms with well-connected CEOs are associated with reduced audit lag. We also find firms led by more connected CEOs have better financial reporting quality and pay higher auditing fees for increased audit efforts.</description>
     </item>
     
