@@ -101,7 +101,7 @@ disqusShortname = "test-n7c34fbkb2"
             [[languages.en.menu.main]]
                 name = "BOOKS"
                 weight = 4
-                url = "DAINA/bookdown-demo.pdf"    
+                url = "DAINA/index.html"    
                 
             [[languages.en.menu.main]]
                 name = "CV"
