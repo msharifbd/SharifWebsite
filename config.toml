@@ -106,7 +106,7 @@ disqusShortname = "test-n7c34fbkb2"
             [[languages.en.menu.main]]
                 name = "CV"
                 weight = 5
-                url = "CV/mycv2_r.pdf"
+                url = "CV/Sharif_Resume_R.pdf"
                 
             [[languages.en.menu.main]]
                 name = "CONTACT"
