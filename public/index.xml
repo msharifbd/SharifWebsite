@@ -13,7 +13,7 @@
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/sumstat/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ----------------- tidyverse 1.</description>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages --------------------## v ggplot2 3.</description>
     </item>
     
     <item>
