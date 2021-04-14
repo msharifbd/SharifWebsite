@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accouting and Data Science. 
 
-# Eduction 
+# Education 
 
 * DBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech University
 * MBA, Major: Accountancy, Eastern Illinois University
