@@ -6,14 +6,23 @@
     <description>Recent content on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Dec 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ethics in Artificial Intelligence (AI)</title>
+      <link>https://sharif.netlify.app/posts/ethics-in-ai/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharif.netlify.app/posts/ethics-in-ai/</guid>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}AI and MisinformationA man used AI to bring back his deceased fiancé.</description>
+    </item>
+    
     <item>
       <title>Summary Statistics Using tidyverse</title>
       <link>https://sharif.netlify.app/posts/sumstat/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/sumstat/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ---------- tidyverse 1.</description>
+      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages -------------- tidyverse 1.</description>
     </item>
     
     <item>
