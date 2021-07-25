@@ -1,5 +1,5 @@
 ---
-title: "Ethics in Artificial Intelligence (AI)"
+title: "Spreading Misinformation"
 author: "Sharif Islam"
 date: '2021-07-25'
 output: html_document
@@ -32,8 +32,6 @@ h4.date { /* Header 4 - and the author and data headers use this too  */
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Spreading of Misinformation 
 
-
-# AI and Misinformation 
-
-* [A man used AI to bring back his deceased fiancé. But the creators of the tech warn it could be dangerous and used to spread misinformation.](https://www.msn.com/en-us/news/technology/a-man-used-ai-to-bring-back-his-deceased-fianc%C3%A9-but-the-creators-of-the-tech-warn-it-could-be-dangerous-and-used-to-spread-misinformation/ar-AAMwlv8?ocid=msedgntp)
+*  [Just 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds. JFK's anti-vaxxer nephew is one of the 'disinformation dozen.'](https://www.businessinsider.com/12-anti-vaxxers-responsible-for-most-disinformation-online-study-says-2021-7)
