@@ -25,7 +25,7 @@ disqusShortname = "test-n7c34fbkb2"
     fixedbarContentAfter = ""
 
     hideCredits = false
-    hideCopyright = false
+    hideCopyright = true
     
 
     # Bottom sns share
