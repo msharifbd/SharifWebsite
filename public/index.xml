@@ -2,71 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharif Islam</title>
-    <link>https://sharif.netlify.app/</link>
+    <link>/</link>
     <description>Recent content on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ethics in Artificial Intelligence (AI)</title>
-      <link>https://sharif.netlify.app/posts/ethics-in-ai/</link>
+      <link>/posts/ethics-in-ai/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/ethics-in-ai/</guid>
+      <guid>/posts/ethics-in-ai/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}AI and MisinformationA man used AI to bring back his deceased fiancé.</description>
     </item>
     
     <item>
       <title>Spreading Misinformation</title>
-      <link>https://sharif.netlify.app/posts/spreading-misinformation/</link>
+      <link>/posts/spreading-misinformation/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/spreading-misinformation/</guid>
+      <guid>/posts/spreading-misinformation/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Spreading of MisinformationJust 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds.</description>
     </item>
     
     <item>
       <title>Summary Statistics Using tidyverse</title>
-      <link>https://sharif.netlify.app/posts/sumstat/</link>
+      <link>/posts/sumstat/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sumstat/</guid>
+      <guid>/posts/sumstat/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ------------------------- tidyverse 1.</description>
     </item>
     
     <item>
       <title>Logistic Regression in R</title>
-      <link>https://sharif.netlify.app/posts/logistic_regression/</link>
+      <link>/posts/logistic_regression/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/logistic_regression/</guid>
+      <guid>/posts/logistic_regression/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>https://sharif.netlify.app/contact/</link>
+      <link>/contact/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/contact/</guid>
+      <guid>/contact/</guid>
       <description>If you want to contact with me, please email at mdshariful.islam@business.siu.edu</description>
     </item>
     
     <item>
       <title>Exploratory Data Analysis (EDA)</title>
-      <link>https://sharif.netlify.app/posts/sharif_first_blog/</link>
+      <link>/posts/sharif_first_blog/</link>
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sharif_first_blog/</guid>
+      <guid>/posts/sharif_first_blog/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}IntroductionNow a days, data science or data analytics has become a buzzword.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</link>
+      <link>/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
@@ -74,29 +74,29 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     
     <item>
       <title></title>
-      <link>https://sharif.netlify.app/about/</link>
+      <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/about/</guid>
+      <guid>/about/</guid>
       <description>I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accouting and Data Science.
 EducationDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting &amp;amp; Information Systems, University of DhakaBBA, Major: Accounting &amp;amp; Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor actitivies a lot, specially fishing and hiking in Southern Illinios.</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://sharif.netlify.app/books/</link>
+      <link>/books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/books/</guid>
+      <guid>/books/</guid>
       <description>Data Analytics in AccountingData analytics is important for accounting profession because data gathering and analytics technologies have the potential to fundamentally change accounting and auditing task processes (Schneider et al. 2015). Scholars note that the emergence of data analytics will significantly change the infer/predict/assure (e.g., insight/foresight/oversight) tasks performed by accountants and auditors. Big data and analytics have increasingly important implications for accounting and will provide the means to improve managerial accounting, financial accounting, and financial reporting practices (Warren Jr, Moffitt, and Byrnes 2015).</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://sharif.netlify.app/projects/</link>
+      <link>/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/projects/</guid>
+      <guid>/projects/</guid>
       <description>CEO Network Centrality &amp;amp; Audit Timeliness The study examines the association between CEO’s network connections and audit timeliness. Based on extant research, we hypothesize that well-connected CEOs are associated with reduced audit lag. Using a sample of over 2000 firms for the period 2004 to 2017, we find that, ceteris paribus, firms with well-connected CEOs are associated with reduced audit lag. We also find firms led by more connected CEOs have better financial reporting quality and pay higher auditing fees for increased audit efforts.</description>
     </item>
     

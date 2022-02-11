@@ -2,53 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sharif Islam</title>
-    <link>https://sharif.netlify.app/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ethics in Artificial Intelligence (AI)</title>
-      <link>https://sharif.netlify.app/posts/ethics-in-ai/</link>
+      <link>/posts/ethics-in-ai/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/ethics-in-ai/</guid>
+      <guid>/posts/ethics-in-ai/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}AI and MisinformationA man used AI to bring back his deceased fiancé.</description>
     </item>
     
     <item>
       <title>Spreading Misinformation</title>
-      <link>https://sharif.netlify.app/posts/spreading-misinformation/</link>
+      <link>/posts/spreading-misinformation/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/spreading-misinformation/</guid>
+      <guid>/posts/spreading-misinformation/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Spreading of MisinformationJust 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds.</description>
     </item>
     
     <item>
       <title>Summary Statistics Using tidyverse</title>
-      <link>https://sharif.netlify.app/posts/sumstat/</link>
+      <link>/posts/sumstat/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sumstat/</guid>
+      <guid>/posts/sumstat/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ------------------------- tidyverse 1.</description>
     </item>
     
     <item>
       <title>Logistic Regression in R</title>
-      <link>https://sharif.netlify.app/posts/logistic_regression/</link>
+      <link>/posts/logistic_regression/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/logistic_regression/</guid>
+      <guid>/posts/logistic_regression/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
     </item>
     
     <item>
       <title>Exploratory Data Analysis (EDA)</title>
-      <link>https://sharif.netlify.app/posts/sharif_first_blog/</link>
+      <link>/posts/sharif_first_blog/</link>
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sharif_first_blog/</guid>
+      <guid>/posts/sharif_first_blog/</guid>
       <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}IntroductionNow a days, data science or data analytics has become a buzzword.</description>
     </item>
     
