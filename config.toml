@@ -66,7 +66,7 @@ disqusShortname = "test-n7c34fbkb2"
     name = "LinkedIn"
     icon = "fab fa-linkedin"
     weight = 3
-    url = "https://www.linkedin.com/in/md-shariful-islam-cpa-cma-09345730/"
+    url = "https://www.linkedin.com/in/sharif-islam-dba-cpa-cma-09345730/"
 
 [languages]
     [languages.en]
@@ -77,7 +77,7 @@ disqusShortname = "test-n7c34fbkb2"
         # You can configure the theme parameter for each language.
         [languages.en.params]
             author = "Sharif Islam, DBA,CPA,CMA"
-            info =  "Assistant Professor of Accountancy & Data Analytics"
+            info = "Assistant Professor of Accountancy & Data Analytics"
             description = "Sharif Islam's personal website"
             keywords = "Accountancy, Data Analytics, Personal"
 

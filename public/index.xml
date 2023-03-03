@@ -13,7 +13,7 @@
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/ethics-in-ai/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}AI and MisinformationA man used AI to bring back his deceased fiancé.</description>
+      <description>AI and MisinformationA man used AI to bring back his deceased fiancé. But the creators of the tech warn it could be dangerous and used to spread misinformation.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/spreading-misinformation/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Spreading of MisinformationJust 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds.</description>
+      <description>Spreading of MisinformationJust 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds. JFK’s anti-vaxxer nephew is one of the ‘disinformation dozen.’</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/sumstat/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}library(tidyverse)## -- Attaching packages ------------------------------- tidyverse 1.</description>
+      <description>library(tidyverse)## -- Attaching packages ------------------------------- tidyverse 1.3.1 --## v ggplot2 3.3.5 v purrr 0.3.4## v tibble 3.0.4 v dplyr 1.0.7## v tidyr 1.1.4 v stringr 1.4.0## v readr 2.1.1 v forcats 0.5.1## -- Conflicts ---------------------------------- tidyverse_conflicts() --## x dplyr::filter() masks stats::filter()## x dplyr::lag() masks stats::lag()For illustration purpose, mtcars dataset is being used. To create summary statistics, summarise_each function is used along with funsfunction.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/logistic_regression/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
+      <description>Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
     </item>
     
     <item>
@@ -58,7 +58,7 @@
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://sharif.netlify.app/posts/sharif_first_blog/</guid>
-      <description>h1.title {font-size: 38px;color: DarkRed;text-align: center;}h4.author { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlack;text-align: center;}h4.date { /* Header 4 - and the author and data headers use this too */font-size: 18px;font-family: &#34;Times New Roman&#34;, Times, serif;color: DarkBlue;text-align: center;}IntroductionNow a days, data science or data analytics has become a buzzword.</description>
+      <description>IntroductionNow a days, data science or data analytics has become a buzzword.The emergence of social media and some other platforms like social media have given birth to vast amount of data. The Economist 1 reports that “the world’s most valuable resource is no longer oil, but data.” Data is the raw materials for gaining addtional insights and the data analytics is the means through which the insights are extracted from the data.</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@
       <guid>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.</description>
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
     <item>
@@ -79,7 +79,7 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       
       <guid>https://sharif.netlify.app/about/</guid>
       <description>I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accouting and Data Science.
-EducationDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting &amp;amp; Information Systems, University of DhakaBBA, Major: Accounting &amp;amp; Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor actitivies a lot, specially fishing and hiking in Southern Illinios.</description>
+EducationDBA, Major: Computer Information Systems; Minor:Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting &amp;amp; Information Systems, University of DhakaBBA, Major: Accounting &amp;amp; Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor actitivies a lot, specially fishing and hiking in Southern Illinios.</description>
     </item>
     
     <item>
