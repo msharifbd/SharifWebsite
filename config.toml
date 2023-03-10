@@ -21,8 +21,8 @@ disqusShortname = "test-n7c34fbkb2"
     info = "Assistant Professor of Accountancy & Data Analytics"
     avatarurl = "images/avatar.jpg"
     footercontent = "The world's most valuable resource is no longer oil, but data (The Economist, 2017)"
-    fixedbarContent = "If you like my page, please Share  ->"
-    fixedbarContentAfter = ""
+    fixedbarContent = "Do you want to know me more private?→" # Add fixedbar content
+    fixedbarContentAfter = "Thank You! Please share it if you like it→" # Add fixedbar content after click
 
     hideCredits = false
     hideCopyright = true
