@@ -67,6 +67,12 @@ disqusShortname = "test-n7c34fbkb2"
     icon = "fab fa-linkedin"
     weight = 3
     url = "https://www.linkedin.com/in/sharif-islam-dba-cpa-cma-09345730/"
+    
+[[params.social]]
+    name = "Facebook"
+    icon = "fab fa-facebook"
+    weight = 4
+    url = "https://www.facebook.com/sharif.is"
 
 [languages]
     [languages.en]
