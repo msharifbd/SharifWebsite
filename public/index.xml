@@ -2,98 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sharif Islam</title>
-    <link>https://sharif.netlify.app/</link>
+    <link>https://sharifshafi.netlify.app/</link>
     <description>Recent content on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sharifshafi.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ACCT360 Accounting Information Systems</title>
-      <link>https://sharif.netlify.app/classes/acct360-ais/</link>
+      <link>https://sharifshafi.netlify.app/classes/acct360-ais/</link>
       <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/classes/acct360-ais/</guid>
+      <guid>https://sharifshafi.netlify.app/classes/acct360-ais/</guid>
       <description>IntroductionSyllabus</description>
     </item>
     
     <item>
       <title>ACCT460 Auditing &amp; Assurance Services</title>
-      <link>https://sharif.netlify.app/classes/acct460-auditing/</link>
+      <link>https://sharifshafi.netlify.app/classes/acct460-auditing/</link>
       <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/classes/acct460-auditing/</guid>
+      <guid>https://sharifshafi.netlify.app/classes/acct460-auditing/</guid>
       <description>IntroductionSyllabus</description>
     </item>
     
     <item>
       <title>BSAN405 Machine Learning in Business</title>
-      <link>https://sharif.netlify.app/classes/bsan405-machine-learning/</link>
+      <link>https://sharifshafi.netlify.app/classes/bsan405-machine-learning/</link>
       <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/classes/bsan405-machine-learning/</guid>
+      <guid>https://sharifshafi.netlify.app/classes/bsan405-machine-learning/</guid>
       <description>IntroductionSyllabus</description>
     </item>
     
     <item>
       <title>Ethics in Artificial Intelligence (AI)</title>
-      <link>https://sharif.netlify.app/posts/ethics-in-ai/</link>
+      <link>https://sharifshafi.netlify.app/posts/ethics-in-ai/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/ethics-in-ai/</guid>
+      <guid>https://sharifshafi.netlify.app/posts/ethics-in-ai/</guid>
       <description>AI and MisinformationA man used AI to bring back his deceased fiancé. But the creators of the tech warn it could be dangerous and used to spread misinformation.</description>
     </item>
     
     <item>
       <title>Spreading Misinformation</title>
-      <link>https://sharif.netlify.app/posts/spreading-misinformation/</link>
+      <link>https://sharifshafi.netlify.app/posts/spreading-misinformation/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/spreading-misinformation/</guid>
+      <guid>https://sharifshafi.netlify.app/posts/spreading-misinformation/</guid>
       <description>Spreading of MisinformationJust 12 people are responsible for the majority of COVID-19 conspiracy theories online, study finds. JFK’s anti-vaxxer nephew is one of the ‘disinformation dozen.’</description>
     </item>
     
     <item>
       <title>Summary Statistics Using tidyverse</title>
-      <link>https://sharif.netlify.app/posts/sumstat/</link>
+      <link>https://sharifshafi.netlify.app/posts/sumstat/</link>
       <pubDate>Tue, 29 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sumstat/</guid>
+      <guid>https://sharifshafi.netlify.app/posts/sumstat/</guid>
       <description>library(tidyverse)## -- Attaching packages ------------------------------- tidyverse 1.3.1 --## v ggplot2 3.3.5 v purrr 0.3.4## v tibble 3.0.4 v dplyr 1.0.7## v tidyr 1.1.4 v stringr 1.4.0## v readr 2.1.1 v forcats 0.5.1## -- Conflicts ---------------------------------- tidyverse_conflicts() --## x dplyr::filter() masks stats::filter()## x dplyr::lag() masks stats::lag()For illustration purpose, mtcars dataset is being used. To create summary statistics, summarise_each function is used along with funsfunction.</description>
     </item>
     
     <item>
       <title>Logistic Regression in R</title>
-      <link>https://sharif.netlify.app/posts/logistic_regression/</link>
+      <link>https://sharifshafi.netlify.app/posts/logistic_regression/</link>
       <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/logistic_regression/</guid>
+      <guid>https://sharifshafi.netlify.app/posts/logistic_regression/</guid>
       <description>Pacakges Needed to Run Logistic Regression# Loading packagespacman::p_load(tidyverse,stargazer, lmtest,sandwich)</description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>https://sharif.netlify.app/contact/</link>
+      <link>https://sharifshafi.netlify.app/contact/</link>
       <pubDate>Fri, 11 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/contact/</guid>
+      <guid>https://sharifshafi.netlify.app/contact/</guid>
       <description>If you want to contact with me, please email at mdshariful.islam@business.siu.edu</description>
     </item>
     
     <item>
       <title>Exploratory Data Analysis (EDA)</title>
-      <link>https://sharif.netlify.app/posts/sharif_first_blog/</link>
+      <link>https://sharifshafi.netlify.app/posts/sharif_first_blog/</link>
       <pubDate>Wed, 09 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/posts/sharif_first_blog/</guid>
+      <guid>https://sharifshafi.netlify.app/posts/sharif_first_blog/</guid>
       <description>IntroductionNow a days, data science or data analytics has become a buzzword.The emergence of social media and some other platforms like social media have given birth to vast amount of data. The Economist 1 reports that “the world’s most valuable resource is no longer oil, but data.” Data is the raw materials for gaining addtional insights and the data analytics is the means through which the insights are extracted from the data.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://sharifshafi.netlify.app/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>https://sharif.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://sharifshafi.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
       <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
@@ -101,29 +101,29 @@ summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
     
     <item>
       <title>About</title>
-      <link>https://sharif.netlify.app/about/</link>
+      <link>https://sharifshafi.netlify.app/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/about/</guid>
+      <guid>https://sharifshafi.netlify.app/about/</guid>
       <description>I am an Assistant Professor in School of Accountancy in College of Business and Analytics in Southern Illinois University Carbondale. My teaching and research interests lie in the intersection between Accounting and Data Science.
 EducationDBA, Major: Computer Information Systems; Minor: Accounting, Louisiana Tech UniversityMBA, Major: Accountancy, Eastern Illinois UniversityMBA, Major: Accounting &amp;amp; Information Systems, University of DhakaBBA, Major: Accounting &amp;amp; Information Systems, University of DhakaProfessional CertificationCPA, State of IllinoisCMA, BangladeshResearch InterestsData BreachesCybersecurityNetwork Centrality of ExecutivesInternational AccountingAudit Efficiency and TimelinessTeaching InterestsAuditing &amp;amp; Assurance ServiceAccounting Information SystemsData AnalyticsMachine LearningHobbiesI enjoy outdoor activities a lot, specially fishing and hiking in Southern Illinois.</description>
     </item>
     
     <item>
       <title>Books</title>
-      <link>https://sharif.netlify.app/books/</link>
+      <link>https://sharifshafi.netlify.app/books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/books/</guid>
+      <guid>https://sharifshafi.netlify.app/books/</guid>
       <description>Data Analytics in AccountingData analytics is important for accounting profession because data gathering and analytics technologies have the potential to fundamentally change accounting and auditing task processes (Schneider et al. 2015). Scholars note that the emergence of data analytics will significantly change the infer/predict/assure (e.g., insight/foresight/oversight) tasks performed by accountants and auditors. Big data and analytics have increasingly important implications for accounting and will provide the means to improve managerial accounting, financial accounting, and financial reporting practices (Warren Jr, Moffitt, and Byrnes 2015).</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>https://sharif.netlify.app/projects/</link>
+      <link>https://sharifshafi.netlify.app/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sharif.netlify.app/projects/</guid>
+      <guid>https://sharifshafi.netlify.app/projects/</guid>
       <description>CEO Network Centrality &amp;amp; Audit Timeliness The study examines the association between CEO’s network connections and audit timeliness. Based on extant research, we hypothesize that well-connected CEOs are associated with reduced audit lag. Using a sample of over 2000 firms for the period 2004 to 2017, we find that, ceteris paribus, firms with well-connected CEOs are associated with reduced audit lag. We also find firms led by more connected CEOs have better financial reporting quality and pay higher auditing fees for increased audit efforts.</description>
     </item>
     
