@@ -104,7 +104,7 @@ disqusShortname = "test-n7c34fbkb2"
                 url = "BOOKS"    
                 
             [[languages.en.menu.main]]
-                name = "CV"
+                name = "RESUME"
                 weight = 5
                 url = "CV/Sharif_Resume_R.pdf"
                 
