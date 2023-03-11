@@ -115,8 +115,13 @@ disqusShortname = "test-n7c34fbkb2"
                 url = "CV/Sharif_Resume_R.pdf"
                 
             [[languages.en.menu.main]]
-                name = "CONTACT"
+                name = "TEACHING"
                 weight = 6
+                url = "classes"
+                
+            [[languages.en.menu.main]]
+                name = "CONTACT"
+                weight = 7
                 url = "contact"
 
 
