@@ -6,7 +6,34 @@
     <description>Recent content on Sharif Islam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sharif.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ACCT360 Accounting Information Systems</title>
+      <link>https://sharif.netlify.app/classes/acct360-ais/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharif.netlify.app/classes/acct360-ais/</guid>
+      <description>IntroductionSyllabus</description>
+    </item>
+    
+    <item>
+      <title>ACCT460 Auditing &amp; Assurance Services</title>
+      <link>https://sharif.netlify.app/classes/acct460-auditing/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharif.netlify.app/classes/acct460-auditing/</guid>
+      <description>IntroductionSyllabus</description>
+    </item>
+    
+    <item>
+      <title>BSAN405 Machine Learning in Business</title>
+      <link>https://sharif.netlify.app/classes/bsan405-machine-learning/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sharif.netlify.app/classes/bsan405-machine-learning/</guid>
+      <description>IntroductionSyllabus</description>
+    </item>
+    
     <item>
       <title>Ethics in Artificial Intelligence (AI)</title>
       <link>https://sharif.netlify.app/posts/ethics-in-ai/</link>
