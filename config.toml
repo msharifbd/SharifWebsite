@@ -83,7 +83,7 @@ disqusShortname = "test-n7c34fbkb2"
         # You can configure the theme parameter for each language.
         [languages.en.params]
             author = "Sharif Islam, DBA,CPA,CMA"
-            info = "Assistant Professor of Accountancy & Data Analytics"
+            info = "Assistant Professor of Accountancy & Data Analytics" 
             description = "Sharif Islam's personal website"
             keywords = "Accountancy, Data Analytics, Personal"
 
